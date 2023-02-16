@@ -1,0 +1,479 @@
+.bg_red {
+    background: #dd4444;
+    box-shadow: 0px 3px 10px #666;
+}
+
+.bg_red:hover {
+    background: #dd2222;
+}
+
+.bg_red:active {
+    background: #ff3333;
+}
+
+.bg_green {
+    background: #66cc66;
+    box-shadow: 0px 3px 10px #666;
+}
+
+.bg_green:hover {
+    background: #44cc44;
+}
+
+.bg_green:active {
+    background: #55e055;
+}
+
+.bg_blue {
+    background: #4499cc;
+    box-shadow: 0px 3px 10px #666;
+}
+
+.bg_blue:hover {
+    background: #3388cc;
+}
+
+.bg_blue:active {
+    background: #00aaff;
+}
+
+.bg_yellow {
+    background: #fcc944;
+    box-shadow: 0px 3px 10px #666;
+}
+
+.bg_yellow:hover {
+    background: #ebc933;
+}
+
+.bg_yellow:active {
+    background: #ffdd44;
+}
+
+.bg_orange {
+    background: #f82;
+    box-shadow: 0px 3px 10px #666;
+}
+
+.bg_orange:hover {
+    background: #f92;
+}
+
+.bg_orange:active {
+    background: #fa3;
+}
+
+.bg_graygreen {
+    background: #8ba;
+    box-shadow: 0px 3px 10px #666;
+}
+
+.bg_graygreen:hover {
+    background: #9cb;
+}
+
+.bg_graygreen:active {
+    background: #9eb;
+}
+
+.bg_lblue {
+    background: #2bf;
+    box-shadow: 0px 3px 10px #666;
+}
+
+.bg_lblue:hover {
+    background: #2cf;
+}
+
+.bg_lblue:active {
+    background: #3df;
+}
+
+.bg_dblue {
+    background: #898;
+    box-shadow: 0px 3px 10px #666;
+}
+
+.bg_dblue:hover {
+    background: #8aa;
+}
+
+.bg_dblue:active {
+    background: #2cf;
+}
+
+.bg_grayblue {
+    background: #9aB;
+    box-shadow: 0px 3px 10px #666;
+}
+
+.bg_grayblue:hover {
+    background: #abc;
+}
+
+.bg_grayblue:active {
+    background: #bcd;
+}
+
+.bg_disabled {
+    background: #ccc;
+}
+
+.bg_digabled:hover {
+    background: #ccc;
+}
+
+.bg_digabled:active {
+    background: #ccc;
+}
+
+::selection {
+    background: transparent;
+}
+
+::-moz-selection {
+    background: transparent;
+}
+
+body {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    background: #ddc;
+    width: 95%;
+    height: 100%;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.slidecontainer {
+    height: 70%;
+    width: 90%;
+    transform: translate(5%, -75%);
+}
+
+.slider {
+    -webkit-appearance: none;
+    background: #d3d3d3;
+    outline: none;
+    width: 100%;
+    height: 20%;
+    border-radius: 1vh;
+}
+
+.slider_value {
+    color: #555;
+    font: 2.5vh Gill Sans MT, Gill Sans, My Gill Sans, sans-serif;
+    padding-bottom: 3vh;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    background: #119eaf;
+    width: 5vh;
+    height: 5vh;
+    border-radius: 50%;
+    box-shadow: 0px 3px 5px #666;
+}
+
+.slider:active::-webkit-slider-thumb {
+    background: #32afa2;
+}
+
+.slider:hover::-webkit-slider-thumb {
+    background: #32afa2;
+}
+
+.slider::-moz-range-thumb {
+    cursor: pointer;
+    background: #119eaf;
+    width: 5vh;
+    height: 5vh;
+    border-radius: 50%;
+    box-shadow: 0px 3px 5px #666;
+}
+
+.slider:active::-moz-range-thumb {
+    background: #32afa2;
+}
+
+.slider:hover::-moz-range-thumb {
+    background: #32afa2;
+}
+
+.widget_layout {
+    position: relative;
+    display: table-cell;
+    height: 100%;
+}
+
+.ctrl_btn {
+    display: table;
+    cursor: pointer;
+    height: 90%;
+    width: 90%;
+    transform: translate(5%, 5%);
+    border-radius: 1vh;
+    border: 0.05vh #00000040 solid;
+    text-align: center;
+}
+
+.ctrl_btn:active {
+    transform: translate(5%, 7%);
+}
+
+.ctrl_btn_text {
+    display: table-cell;
+    vertical-align: middle;
+    border-radius: 1vh;
+    font-weight: bold;
+    text-shadow: -0.15vh 0.25vh 0.25vh #00000044;
+    font: 2vh Gill Sans MT, Gill Sans, My Gill Sans, sans-serif;
+    color: #fff;
+}
+
+.ctrl_btn_text:active {
+    text-shadow: 0 -0.15vh 0.15vh #00000088;
+}
+
+.hor_widgets_layout {
+    display: table;
+    table-layout: fixed;
+    text-align: center;
+    background: #f0f0f0;
+    border-spacing: 1vh;
+    border-radius: 1.5vh;
+    border: 0.1vh #bbb solid;
+    height: calc(100% - 0.5vh);
+    width: 97%;
+    margin: 2vh;
+}
+
+.no_border {
+    border: none;
+}
+
+.log_line_layout {
+    height: 100%;
+    width: 100%;
+}
+
+.log_line {
+    cursor: pointer;
+    width: 95%;
+    height: 60%;
+    transform: translate(0%, 20%);
+    border: 0.25vh #dddc solid;
+    border-radius: 1vh;
+    padding-left: 1vh;
+    line-height: 100%;
+    font: 1.75vh Gill Sans MT, Gill Sans, My Gill Sans, sans-serif;
+    font-weight: normal;
+    background: #454;
+    color: #afa;
+    outline: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-shadow: 0 2px 8px #0004;
+    --info-txt-color: #afa;
+    --error-txt-color: #f86;
+    --warn-txt-color: #ffb21a;
+    --progress-txt-color: #ccc;
+}
+
+.log_line_warning {
+    cursor: pointer;
+    width: 95%;
+    height: 60%;
+    transform: translate(0%, 20%);
+    border: 0.25vh #dddc solid;
+    border-radius: 1vh;
+    padding-left: 1vh;
+    line-height: 100%;
+    font: 1.75vh Gill Sans MT, Gill Sans, My Gill Sans, sans-serif;
+    font-weight: normal;
+    background: #b61;
+    color: #afa;
+    outline: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-shadow: 0 2px 8px #0004;
+    --info-txt-color: #afa;
+    --error-txt-color: #f86;
+    --warn-txt-color: #ffb21a;
+    --progress-txt-color: #ccc;
+}
+
+.log_line_error {
+    cursor: pointer;
+    width: 95%;
+    height: 60%;
+    transform: translate(0%, 20%);
+    border: 0.25vh #dddc solid;
+    border-radius: 1vh;
+    padding-left: 1vh;
+    line-height: 100%;
+    font: 1.75vh Gill Sans MT, Gill Sans, My Gill Sans, sans-serif;
+    font-weight: normal;
+    background: #a54;
+    color: #afa;
+    outline: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-shadow: 0 2px 8px #0004;
+    --info-txt-color: #afa;
+    --error-txt-color: #f86;
+    --warn-txt-color: #ffb21a;
+    --progress-txt-color: #ccc;
+}
+
+.logs_window_root {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #fffb;
+    visibility: hidden;
+}
+
+.logs_window {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 2.5vh;
+    left: 2.5vh;
+    width: calc(100% - 5vh);
+    height: calc(100% - 5vh);
+    background: #fff;
+    border: 0.1em #bbb solid;
+    border-radius: 1vh;
+    box-shadow: 0 0 15px #0006;
+}
+
+.logs_list_block {
+    height: 85%;
+}
+
+.logs_btns_block {
+    flex: 15%;
+}
+
+.logs_list_layout {
+    height: 94%;
+    width: 92%;
+    transform: translate(4%, 2%);
+}
+
+.logs_list_scroll {
+    position: relative;
+    height: 100%;
+    background: #454;
+    border-radius: 1vh;
+    border: 0.25vh #ddd solid;
+    overflow-y: visible;
+    overflow-x: hidden;
+    padding: 0.5vh;
+    box-shadow: 0 3px 8px #0004;
+}
+
+.logs_list_scroll::-webkit-scrollbar {
+    background-color: #afa3;
+    width: 1vh;
+    border-radius: 1vh;
+}
+
+.logs_list_scroll::-webkit-scrollbar-thumb {
+    background-color: #afa8;
+    border-radius: 1vh;
+}
+
+.logs_list {
+    height: 100%;
+}
+
+.logs_list_item {
+    border-bottom: 1px #afa2 solid;
+    font: 1.75vh Gill Sans MT, Gill Sans, My Gill Sans, sans-serif;
+    font-weight: normal;
+    text-align: left;
+    padding: 1vh;
+    color: #afa;
+    word-break: break-all;
+}
+
+.log_btns_layout {
+    display: table;
+    table-layout: fixed;
+    text-align: center;
+    border-spacing: 1vh;
+    height: calc(100% - 0.5vh);
+    width: 100%;
+}
+
+.logs_panel_btn {
+    font-size: 2.5vh;
+}
+
+.mode_info_line_layout {
+    padding-left: 5vh;
+    padding-right: 5vh;
+}
+
+.mode_info_line {
+    cursor: pointer;
+    width: 100%;
+    height: 3em;
+    transform: translate(0%, -25%);
+    border: 0.25vh #dddc solid;
+    border-radius: 1vh;
+    padding-left: 1vh;
+    line-height: 100%;
+    font: 1.5em Gill Sans MT, Gill Sans, My Gill Sans, sans-serif;
+    font-weight: bolder;
+    background: #454;
+    color: #afa;
+    outline: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    box-shadow: 0 2px 8px #0004;
+    --info-txt-color: #afa;
+    --error-txt-color: #f86;
+    --warn-txt-color: #ffb21a;
+    --progress-txt-color: #ccc;
+}
+
+#log_line_root {
+    height: 10%;
+}
+
+#modes_switcher_root {
+    height: 10%;
+}
+
+.sending_root {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+    background: #f0f0f0;
+}
+
+.sending_info_line {
+    padding: 0.5vh;
+    font: 3vh Gill Sans MT, Gill Sans, My Gill Sans, sans-serif;
+    font-weight: bolder;
+    text-align: left;
+    color: #666;
+}
