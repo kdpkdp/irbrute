@@ -75,6 +75,11 @@ namespace IrRemote
       m_sender.begin(getSendPin());
     }
 
+    void stop()
+    {
+      // do nothing
+    }
+
   private:
     StringResult sendImpl(const EncodedSignalView& signal)
     {

@@ -40,6 +40,7 @@ namespace Signals
 
     virtual void onModeStop() override
     {
+      m_sender.stop();
     }
 
     virtual Controls::CmdResult onModeCmd(const String& cmd, const String& data) override
