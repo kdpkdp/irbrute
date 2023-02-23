@@ -108,7 +108,7 @@ namespace Controls
       m_state->beepMs = ::millis();
       m_state->beepIdx = beepIdx;
       m_state->beep = &m_state->melody.beeps[beepIdx];
-      ::setPinTone(m_pin, m_state->beep->freq);
+      Utils::Beeps::setPinTone(m_pin, m_state->beep->freq);
     }
   };
 }
