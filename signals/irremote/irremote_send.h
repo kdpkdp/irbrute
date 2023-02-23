@@ -11,6 +11,7 @@ namespace IrRemote
   {
   public:
     static constexpr uint8_t PIN_SEND = IR_SEND_PIN;
+    static constexpr char VERSION[] = VERSION_IRREMOTE;
 
     static StringResult validateRaw(const uint32_t* aBufferWithMicroseconds, uint32_t aLengthOfBuffer)
     {

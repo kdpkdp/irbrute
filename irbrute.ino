@@ -15,13 +15,13 @@ struct Config
 
   static constexpr auto PIN_BEEP      = Utils::Pins::Pin::D2;
   static constexpr auto PIN_INDICATOR = Utils::Pins::Pin::D5;
-  static constexpr auto PIN_IR_SEND   = Utils::Pins::Pin::D6;
+  static constexpr auto PIN_SEND      = Utils::Pins::Pin::D6;
 
   static inline void setupPins()
   {
     Utils::Pins::setPinMode<Utils::Pins::PinMode::OUTPUT_MODE>(PIN_INDICATOR);
     Utils::Pins::setPinMode<Utils::Pins::PinMode::OUTPUT_MODE>(PIN_BEEP);
-    Utils::Pins::setPinMode<Utils::Pins::PinMode::OUTPUT_MODE>(PIN_IR_SEND);
+    Utils::Pins::setPinMode<Utils::Pins::PinMode::OUTPUT_MODE>(PIN_SEND);
   }
 
   static_assert((sizeof(NET_NAME) > 1 || sizeof(AP_SSID) > 1) && "NET_NAME or AP_SSID should be specified");

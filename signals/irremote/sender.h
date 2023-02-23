@@ -15,7 +15,7 @@ namespace IrRemote
   template <typename Cfg>
   class Sender
   {
-    static_assert(Utils::Pins::pin_cast(Cfg::PIN_IR_SEND) == IrSend::PIN_SEND);
+    static_assert(Utils::Pins::pin_cast(Cfg::PIN_SEND) == IrSend::PIN_SEND);
 
     using KnownSignal     = std::pair<String, std::unique_ptr<Signal>>;
     using KnownSignalsArr = decltype(createAllSignals());
@@ -35,8 +35,8 @@ namespace IrRemote
     {
       String info = "";
 
-      info += String(F("\nIrRemote: ")) + VERSION_IRREMOTE;
-      info += String(F("\nSend pin: ")) + getSendPin();
+      info += String(F("\nIrRemote: ")) + IrSend::VERSION;
+      info += String(F("\nSend pin: ")) + Utils::Pins::pin_cast(Cfg::PIN_SEND);
       info += String(F("\nProtocols [")) + m_knownSignals.size() + F("]:");
       for (const auto& signal: m_knownSignals)
       {
@@ -64,15 +64,10 @@ namespace IrRemote
       });
     }
 
-    uint8_t getSendPin() const
-    {
-      return IR_SEND_PIN;
-    }
-
     void start()
     {
       Utils::Pins::setPinState(Cfg::PIN_INDICATOR, true);
-      m_sender.begin(getSendPin());
+      m_sender.begin(Utils::Pins::pin_cast(Cfg::PIN_SEND));
     }
 
     void stop()
