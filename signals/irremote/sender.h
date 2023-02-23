@@ -36,21 +36,22 @@ namespace IrRemote
       String info = "";
 
       info += String(F("\nIrRemote: ")) + IrSend::VERSION;
-      info += String(F("\nSend pin: ")) + Utils::Pins::pin_cast(Cfg::PIN_SEND);
+      info += String(F("\nSend pin: GPIO ")) + Utils::Pins::pin_cast(Cfg::PIN_SEND);
       info += String(F("\nProtocols [")) + m_knownSignals.size() + F("]:");
       for (const auto& signal: m_knownSignals)
       {
         info += String(F("\n  ")) + signal.first;
       }
 
-      int freqs[] = {36, 38, 40, 56};
+      const int freqs[] = {36, 38, 40, 56};
+      info += String(F("\n\nFrequencies [")) + (sizeof(freqs) / sizeof(*freqs)) + F("]:");
       for (unsigned i = 0; i < sizeof(freqs) / sizeof(*freqs); ++i)
       {
         m_sender.enableIROut(freqs[i]);
-        info += String(F("\n\n")) + freqs[i] + F("KHz:");
-        info += String(F("\n  Period duration:   ")) + m_sender.periodTimeMicros + F(" micros");
-        info += String(F("\n  Pulse ON duration: ")) + m_sender.periodOnTimeMicros + F(" micros");
-        info += String(F("\n  Pulse correction:  ")) + m_sender.getPulseCorrectionNanos() + F(" nanos");
+        info += String(F("\n  ")) + freqs[i] + F("KHz:");
+        info += String(F("\n    Period duration:   ")) + m_sender.periodTimeMicros + F(" micros");
+        info += String(F("\n    Pulse ON duration: ")) + m_sender.periodOnTimeMicros + F(" micros");
+        info += String(F("\n    Pulse correction:  ")) + m_sender.getPulseCorrectionNanos() + F(" nanos");
       }
 
       return StringResult::ok(info);

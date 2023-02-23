@@ -200,7 +200,7 @@ public:
     info += String(F("\n  <pre> Free Heap:            ")) + ESP.getFreeHeap()                         + closePre;
     info += String(F("\n  <pre> Max Free Block Size:  ")) + ESP.getMaxFreeBlockSize()                 + closePre;
     info += String(F("\n  <pre> Heap Fragmentation:   ")) + ESP.getHeapFragmentation()                + closePre;
-    info += String(F("\n  <pre> PIN_SEND:             GPIO ")) + Utils::Pins::pin_cast(Cfg::PIN_SEND) + closePre;
+    info += String(F("\n  <pre> Send pin:             GPIO ")) + Utils::Pins::pin_cast(Cfg::PIN_SEND) + closePre;
     info += F("\n  <pre>-----------------------------------------------------------</pre>");
     info += F("</body>");
     info += F("</html>");
