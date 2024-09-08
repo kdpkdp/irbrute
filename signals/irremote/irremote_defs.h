@@ -291,11 +291,11 @@ void noTone(uint8_t aPinNumber){
 
 #include <IRremote.hpp>
 
-#define ASERT_MESSAGE ""\
-"\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" \
-"\n! Required IRRemote version: 3.9.0            !" \
-"\n! Current IRRemote version:  " VERSION_IRREMOTE "            !" \
-"\n! The project is tested with IRRemove v3.9.0  !" \
-"\n! Remove static_assert to try other version   !" \
-"\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-static_assert(VERSION_IRREMOTE_MAJOR == 3 && VERSION_IRREMOTE_MINOR == 9 && VERSION_IRREMOTE_PATCH == 0, ASERT_MESSAGE);
+#define UNEXPECTED_IRREMOTE_VERSION_ASERT_MESSAGE ""\
+"\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" \
+"\n! Required IRremote version: 3.9.0              !" \
+"\n! Current IRremote version:  " VERSION_IRREMOTE "              !" \
+"\n! The 'irbrute' is tested with IRremote v3.9.0  !" \
+"\n! Remove static_assert to try other version     !" \
+"\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+static_assert(VERSION_IRREMOTE_MAJOR == 3 && VERSION_IRREMOTE_MINOR == 9 && VERSION_IRREMOTE_PATCH == 0, UNEXPECTED_IRREMOTE_VERSION_ASERT_MESSAGE);
